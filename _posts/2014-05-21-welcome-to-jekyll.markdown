@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Bar Charts"
 date:   2014-05-21 14:28:32
 categories: jekyll update
 ---
