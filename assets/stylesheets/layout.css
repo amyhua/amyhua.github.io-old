@@ -104,6 +104,11 @@ body {
 
 .welcome-wrap {
   margin-top: 5em; }
+  .welcome-wrap .subtext {
+    font-family: 'Rockwell', sans-serif;
+    color: #B4B4B4;
+    padding: 5px;
+    margin-top: 1em; }
   .welcome-wrap .welcome {
     font-size: 3.5em;
     font-family: 'Rockwell', Arial, sans-serif;
