@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/bootstrap-grid.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/layout.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/resume.css" | prepend: site.baseurl }}">
+
+    <!-- Vendor JS -->
+    <script src="{{ "/assets/javascript/angular.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/javascript/momentjs/moment.js" | prepend: site.baseurl }}"></script>
 
     <!-- Custom JS -->
-    <script src="{{ "/js/angular.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/javascript/main.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/javascript/app.js" | prepend: site.baseurl }}"></script>
 
 </head>

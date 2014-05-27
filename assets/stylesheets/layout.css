@@ -1,0 +1,173 @@
+.fade {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; }
+  .fade.in {
+    opacity: 1; }
+
+.centered {
+  margin: auto;
+  position: relative; }
+
+.grey-lt {
+  color: #ccc; }
+
+.red {
+  color: #da175d; }
+
+.blue {
+  color: #008fff; }
+
+.orange {
+  color: #ffa51f; }
+
+.pink {
+  color: #ff4f6e; }
+
+.green {
+  color: green; }
+
+.lead {
+  font-size: 1.2em; }
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0; }
+
+.sidebar {
+  padding: 0;
+  margin: 0; }
+  .sidebar header {
+    color: #696969;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    width: 150px;
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-size: 20px; }
+    .sidebar header h1 {
+      font-size: 26px;
+      font-weight: 500; }
+    .sidebar header h2 {
+      font-size: 20px;
+      font-weight: 200; }
+  .sidebar a, .sidebar a:visited {
+    text-decoration: none;
+    color: inherit; }
+  .sidebar .links a {
+    color: #999;
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px white;
+    text-transform: lowercase;
+    font-size: 14px; }
+    .sidebar .links a:hover, .sidebar .links a.active {
+      color: #696969;
+      border-bottom: dotted 1px #eee;
+      text-decoration: none; }
+  .sidebar .contact {
+    padding: 40px 10px 20px 20px;
+    color: #999; }
+    .sidebar .contact a {
+      line-height: 32px;
+      display: block; }
+      .sidebar .contact a:hover {
+        text-decoration: none; }
+        .sidebar .contact a:hover path {
+          fill: #696969; }
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+  .main > section {
+    height: 100%;
+    padding: 10px;
+    overflow: auto; }
+  .main .home {
+    margin-top: 24px; }
+
+@media (min-width: 600px) {
+  .sidebar {
+    width: 150px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 3px 0px 4px #F0F0F0;
+    -webkit-transition: width 0.15s ease-in-out;
+    -moz-transition: width 0.15s ease-in-out;
+    -ms-transition: width 0.15s ease-in-out;
+    -o-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out; }
+    .sidebar .contact {
+      position: fixed;
+      bottom: 0;
+      width: 130px;
+      -webkit-transition: width 0.15s ease-in-out;
+      -moz-transition: width 0.15s ease-in-out;
+      -ms-transition: width 0.15s ease-in-out;
+      -o-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out; }
+    .sidebar + .main {
+      margin-left: 150px;
+      -webkit-transition: margin-left 0.15s ease-in-out;
+      -moz-transition: margin-left 0.15s ease-in-out;
+      -ms-transition: margin-left 0.15s ease-in-out;
+      -o-transition: margin-left 0.15s ease-in-out;
+      transition: margin-left 0.15s ease-in-out; }
+      .sidebar + .main > section {
+        padding-left: 30px; } }
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: inline-block;
+    background: #eee;
+    box-shadow: 5px 5px 1px #868686; }
+    .sidebar:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    * html .sidebar {
+      height: 1px; }
+    .sidebar .links a {
+      border: none; }
+      .sidebar .links a:hover {
+        border: none;
+        color: black;
+        background: white; }
+    .sidebar .contact {
+      position: relative;
+      border-bottom: solid 1px #eee; }
+      .sidebar .contact div {
+        padding-bottom: 10px; }
+      .sidebar .contact a {
+        margin-right: 36px; }
+    .sidebar div, .sidebar header {
+      float: left;
+      width: 100%; }
+
+  .main {
+    margin-top: -24px;
+    margin-left: 0;
+    background: #eee; } }
+/*      SOCIAL MEDIA       */
+.github-icon-svg,
+.twitter-icon-svg,
+.email-icon-svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px; }

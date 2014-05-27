@@ -1,0 +1,231 @@
+@mixin transition($transition-property, $transition-time) {
+    -webkit-transition: $transition-property $transition-time ease-in-out;
+    -moz-transition: $transition-property $transition-time ease-in-out;
+    -ms-transition: $transition-property $transition-time ease-in-out;
+    -o-transition: $transition-property $transition-time ease-in-out;
+    transition: $transition-property $transition-time ease-in-out;
+}
+
+.fade {
+  @include transition(opacity, 0.5s);
+  opacity: 0;
+  &.in {
+    opacity: 1;
+  }
+}
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+.centered {
+  margin: auto;
+  position: relative;
+}
+
+.grey-lt {
+  color: #ccc;
+}
+
+.red {
+    color: rgb(218, 23, 93);
+}
+.blue {
+    color: rgb(0, 143, 255);
+}
+.orange {
+    color: rgb(255, 165, 31);
+}
+.pink {
+    color: rgb(255, 79, 110);
+}
+.green {
+    color: green;
+}
+
+
+.lead {
+  font-size: 1.2em;
+}
+
+
+$header-font-size: 20px;
+$sidebar-padding-left: 20px;
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  padding: 0;
+  margin: 0;
+
+  header {
+    color: #696969;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    width: 150px;
+    padding: 10px;
+    padding-left: $sidebar-padding-left;
+    margin-bottom: 40px;
+    font-size: $header-font-size;
+
+    h1 {
+      font-size: 26px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  .links {
+    a {
+      color: #999;
+      display: block;
+      padding-left: $sidebar-padding-left;
+      margin-bottom: 10px;
+      border-bottom: solid 1px white;
+      text-transform: lowercase;
+      font-size: 14px;
+
+      &:hover, &.active {
+        color: #696969;
+        border-bottom: dotted 1px #eee;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .contact {
+    padding: 40px 10px 20px $sidebar-padding-left;
+    color: #999;
+    a {
+      line-height: 32px;
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+        path {
+          fill: #696969;
+        }
+      }
+    }
+  }
+
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  > section {
+    height: 100%;
+    padding: 10px;
+    overflow: auto;
+  }
+  .home {
+    margin-top: 24px;
+  }
+}
+
+// ---- RESPONSIVE DESIGN ----
+$sidebar-width: 150px;
+$sidebar-width-expanded: 250px;
+
+@media (min-width: 600px) {
+  .sidebar {
+    width: $sidebar-width;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    box-shadow: 3px 0px 4px #F0F0F0;
+    @include transition(width, 0.15s);
+
+    .contact {
+      position: fixed;
+      bottom: 0;
+      width: $sidebar-width - 20px;
+      @include transition(width, 0.15s);
+    }
+    + .main {
+      margin-left: $sidebar-width;
+      @include transition(margin-left, 0.15s);
+
+      > section {
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    @include clearfix;
+    background: #eee;
+    box-shadow: 5px 5px 1px #868686;
+
+    .links a {
+      border: none;
+
+      &:hover {
+        border: none;
+        color: black;
+        background: white;
+      }
+    }
+
+    .contact {
+      position: relative;
+      border-bottom: solid 1px #eee;
+      div {
+        padding-bottom: 10px;
+      }
+      a {
+        margin-right: 36px;
+      }
+    }
+    div, header {
+      float: left;
+      width: 100%;
+    }
+  }
+  .main {
+    margin-top: -24px;
+    margin-left: 0;
+    background: #eee;
+  }
+}
+
+
+/*      SOCIAL MEDIA       */
+
+.github-icon-svg,
+.twitter-icon-svg,
+.email-icon-svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+}

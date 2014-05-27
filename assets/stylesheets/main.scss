@@ -9,7 +9,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
@@ -24,6 +24,9 @@ a:visited { color: #205caa; }
 
 /* Utility */
 
+.right {
+  text-align: right;
+}
 .wrap:before,
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
