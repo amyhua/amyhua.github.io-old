@@ -13,11 +13,11 @@ app.controller('ResumeCtrl', function($scope){
     { name: 'AngularJS', level: 80 },
     { name: 'Ruby on Rails & Sinatra', level: 70 },
     { name: 'HTML & CSS with SASS', level: 90 },
-    { name: 'D3', level: 70 },
+    { name: 'D3', level: 50 },
     { name: 'Data Analysis', level: 80 },
-    { name: 'Design', level: 40 },
+    { name: 'Design', level: 20 },
     { name: 'Creativity', level: 80 },
-    { name: 'User Experience', level: 50 }
+    { name: 'User Experience', level: 30 }
   ].sort(function(a,b){
     return b.level - a.level;
   });
