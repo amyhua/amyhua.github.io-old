@@ -74,7 +74,6 @@ app.controller('ResumeCtrl', function($scope){
     { role: 'Mathematics with Specialization in Economics, B.S.',
       org: 'University of Chicago',
       timeframe: ['2008', '2012'],
-      brief: 'Top 4 Mathematics Department & Top 2 Economics Department worldwide.',
       desc: [
         'Mathematics Research for Undergraduates (REU) Apprentice, focused on abstract algebra & topology',
         'Founded & led a non-profit organization (40-60 members) focused on event program management, marketing, and fundraising for an experimental arts community space.',
@@ -118,3 +117,14 @@ app.filter('duration', function() {
 
   };
 });
+
+app.directive('menuLink', function(){
+  return {
+    restrict: 'C',
+    link: function($scope, element){
+      element.on('click', function(){
+        element.parent().parent().toggleClass('expand');
+      })
+    }
+  }
+})

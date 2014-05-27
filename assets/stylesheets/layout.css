@@ -39,28 +39,29 @@ body {
   padding: 0;
   margin: 0; }
 
-.sidebar {
+#sidebar {
   padding: 0;
   margin: 0; }
-  .sidebar header {
+  #sidebar header {
     color: #696969;
     margin-bottom: 20px;
     text-transform: lowercase;
     width: 150px;
-    padding: 10px;
-    padding-left: 20px;
     margin-bottom: 40px;
     font-size: 20px; }
-    .sidebar header h1 {
+    #sidebar header h1, #sidebar header h2 {
+      padding: 10px;
+      padding-left: 20px; }
+    #sidebar header h1 {
       font-size: 26px;
       font-weight: 500; }
-    .sidebar header h2 {
+    #sidebar header h2 {
       font-size: 20px;
       font-weight: 200; }
-  .sidebar a, .sidebar a:visited {
+  #sidebar a, #sidebar a:visited {
     text-decoration: none;
     color: inherit; }
-  .sidebar .links a {
+  #sidebar .links a {
     color: #999;
     display: block;
     padding-left: 20px;
@@ -68,20 +69,47 @@ body {
     border-bottom: solid 1px white;
     text-transform: lowercase;
     font-size: 14px; }
-    .sidebar .links a:hover, .sidebar .links a.active {
+    #sidebar .links a:hover, #sidebar .links a.active {
       color: #696969;
       border-bottom: dotted 1px #eee;
       text-decoration: none; }
-  .sidebar .contact {
-    padding: 40px 10px 20px 20px;
+  #sidebar .contact {
     color: #999; }
-    .sidebar .contact a {
+    #sidebar .contact a {
       line-height: 32px;
-      display: block; }
-      .sidebar .contact a:hover {
+      display: block;
+      padding-left: 1em; }
+      #sidebar .contact a path {
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -ms-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out;
+        transition: opacity 0.15s ease-in-out; }
+      #sidebar .contact a .icon-label {
+        padding-left: 10px;
+        opacity: 0;
+        text-transform: lowercase;
+        color: #696969;
+        -webkit-transition: opacity 0.15s ease-in-out;
+        -moz-transition: opacity 0.15s ease-in-out;
+        -ms-transition: opacity 0.15s ease-in-out;
+        -o-transition: opacity 0.15s ease-in-out;
+        transition: opacity 0.15s ease-in-out; }
+      #sidebar .contact a:hover {
         text-decoration: none; }
-        .sidebar .contact a:hover path {
+        #sidebar .contact a:hover path {
           fill: #696969; }
+        #sidebar .contact a:hover .icon-label {
+          opacity: 1; }
+
+.welcome-wrap {
+  margin-top: 5em; }
+  .welcome-wrap .welcome {
+    font-size: 3.5em;
+    font-family: 'Rockwell', Arial, sans-serif;
+    background: rgba(255, 255, 163, 0.39);
+    display: inline;
+    box-shadow: 5px 4px 3px #998F6E; }
 
 .main {
   margin: 0;
@@ -94,78 +122,103 @@ body {
   .main .home {
     margin-top: 24px; }
 
+/* ---- RESPONSIVE DESIGN ---- */
 @media (min-width: 600px) {
-  .sidebar {
+  #sidebar {
     width: 150px;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
-    box-shadow: 3px 0px 4px #F0F0F0;
-    -webkit-transition: width 0.15s ease-in-out;
-    -moz-transition: width 0.15s ease-in-out;
-    -ms-transition: width 0.15s ease-in-out;
-    -o-transition: width 0.15s ease-in-out;
-    transition: width 0.15s ease-in-out; }
-    .sidebar .contact {
+    box-shadow: 3px 0px 4px #F0F0F0; }
+    #sidebar .menu-link {
+      display: none; }
+    #sidebar .contact {
       position: fixed;
       bottom: 0;
-      width: 130px;
-      -webkit-transition: width 0.15s ease-in-out;
-      -moz-transition: width 0.15s ease-in-out;
-      -ms-transition: width 0.15s ease-in-out;
-      -o-transition: width 0.15s ease-in-out;
-      transition: width 0.15s ease-in-out; }
-    .sidebar + .main {
-      margin-left: 150px;
-      -webkit-transition: margin-left 0.15s ease-in-out;
-      -moz-transition: margin-left 0.15s ease-in-out;
-      -ms-transition: margin-left 0.15s ease-in-out;
-      -o-transition: margin-left 0.15s ease-in-out;
-      transition: margin-left 0.15s ease-in-out; }
-      .sidebar + .main > section {
+      width: 130px; }
+    #sidebar + .main {
+      margin-left: 150px; }
+      #sidebar + .main > section {
         padding-left: 30px; } }
 @media (max-width: 600px) {
-  .sidebar {
+  #sidebar {
+    background: #525252;
     width: 100%;
-    position: relative;
     height: auto;
     display: inline-block;
-    background: #eee;
-    box-shadow: 5px 5px 1px #868686; }
-    .sidebar:after {
+    box-shadow: 5px 5px 5px #868686;
+    overflow: hidden;
+    max-height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 999; }
+    #sidebar:after {
       content: ".";
       display: block;
       height: 0;
       clear: both;
       visibility: hidden; }
-    * html .sidebar {
+    * html #sidebar {
       height: 1px; }
-    .sidebar .links a {
-      border: none; }
-      .sidebar .links a:hover {
+    #sidebar header {
+      color: white; }
+    #sidebar.expand {
+      max-height: 9999px; }
+    #sidebar .links a {
+      border: none;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      font-size: 18px; }
+      #sidebar .links a:hover {
         border: none;
         color: black;
         background: white; }
-    .sidebar .contact {
+    #sidebar .menu-link {
+      color: #8A8A8A;
+      width: 50px;
+      height: 48px;
+      text-align: center;
+      border-radius: 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      font-size: 34px;
+      cursor: pointer; }
+    #sidebar .contact {
       position: relative;
-      border-bottom: solid 1px #eee; }
-      .sidebar .contact div {
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      text-align: center; }
+      #sidebar .contact path {
+        fill: #eee; }
+      #sidebar .contact a {
+        display: inline-block;
+        padding: 10px;
+        width: 23%;
+        height: 42px;
+        text-align: center; }
+        #sidebar .contact a:first-child {
+          margin-left: 1em; }
+        #sidebar .contact a .icon-svg {
+          width: 35px;
+          height: 35px; }
+        #sidebar .contact a .icon-label {
+          display: none; }
+      #sidebar .contact div {
         padding-bottom: 10px; }
-      .sidebar .contact a {
-        margin-right: 36px; }
-    .sidebar div, .sidebar header {
+    #sidebar div, #sidebar header {
       float: left;
       width: 100%; }
 
   .main {
+    padding-top: 85px;
     margin-top: -24px;
-    margin-left: 0;
-    background: #eee; } }
-/*      SOCIAL MEDIA       */
-.github-icon-svg,
-.twitter-icon-svg,
-.email-icon-svg {
+    margin-left: 0; }
+    .main .welcome {
+      font-size: 48px; } }
+.icon-svg {
   display: inline-block;
   width: 16px;
   height: 16px;

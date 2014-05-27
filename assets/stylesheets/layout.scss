@@ -66,7 +66,7 @@ body {
   margin: 0;
 }
 
-.sidebar {
+#sidebar {
   padding: 0;
   margin: 0;
 
@@ -75,11 +75,13 @@ body {
     margin-bottom: 20px;
     text-transform: lowercase;
     width: 150px;
-    padding: 10px;
-    padding-left: $sidebar-padding-left;
     margin-bottom: 40px;
     font-size: $header-font-size;
 
+    h1, h2 {
+      padding: 10px;
+      padding-left: $sidebar-padding-left;
+    }
     h1 {
       font-size: 26px;
       font-weight: 500;
@@ -113,21 +115,46 @@ body {
   }
 
   .contact {
-    padding: 40px 10px 20px $sidebar-padding-left;
     color: #999;
     a {
       line-height: 32px;
       display: block;
+      padding-left: 1em;
+
+      path {
+        @include transition(opacity, 0.15s);
+      }
+      .icon-label {
+        padding-left: 10px;
+        opacity: 0;
+        text-transform: lowercase;
+        color: #696969;
+        @include transition(opacity, 0.15s);
+      }
 
       &:hover {
         text-decoration: none;
         path {
           fill: #696969;
         }
+        .icon-label {
+          opacity: 1;
+        }
       }
     }
   }
 
+}
+
+.welcome-wrap {
+  margin-top: 5em;
+  .welcome {
+    font-size: 3.5em;
+    font-family: 'Rockwell', Arial, sans-serif;
+    background: rgba(255, 255, 163, 0.39);
+    display: inline;
+    box-shadow: 5px 4px 3px #998F6E;
+  }
 }
 
 .main {
@@ -145,29 +172,31 @@ body {
   }
 }
 
-// ---- RESPONSIVE DESIGN ----
+/* ---- RESPONSIVE DESIGN ---- */
+
 $sidebar-width: 150px;
 $sidebar-width-expanded: 250px;
 
 @media (min-width: 600px) {
-  .sidebar {
+  #sidebar {
     width: $sidebar-width;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     box-shadow: 3px 0px 4px #F0F0F0;
-    @include transition(width, 0.15s);
+
+    .menu-link {
+      display: none;
+    }
 
     .contact {
       position: fixed;
       bottom: 0;
       width: $sidebar-width - 20px;
-      @include transition(width, 0.15s);
     }
     + .main {
       margin-left: $sidebar-width;
-      @include transition(margin-left, 0.15s);
 
       > section {
         padding-left: 30px;
@@ -176,17 +205,37 @@ $sidebar-width-expanded: 250px;
   }
 }
 
+
 @media (max-width: 600px) {
-  .sidebar {
+
+$sidebar-condensed-height: 60px;
+  #sidebar {
+    background: #525252;
     width: 100%;
-    position: relative;
     height: auto;
     @include clearfix;
-    background: #eee;
-    box-shadow: 5px 5px 1px #868686;
+    box-shadow: 5px 5px 5px #868686;
+
+    overflow: hidden;
+    max-height: $sidebar-condensed-height;
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    header {
+      color: white;
+    }
+
+    &.expand {
+      max-height: 9999px;
+    }
 
     .links a {
       border: none;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      font-size: 18px;
 
       &:hover {
         border: none;
@@ -195,14 +244,49 @@ $sidebar-width-expanded: 250px;
       }
     }
 
+    .menu-link {
+      color: #8A8A8A;
+      width: 50px;
+      height: 48px;
+      text-align: center;
+      border-radius: 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      font-size: 34px;
+      cursor: pointer;
+    }
+
     .contact {
       position: relative;
-      border-bottom: solid 1px #eee;
-      div {
-        padding-bottom: 10px;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      text-align: center;
+
+      path {
+        fill: #eee;
       }
       a {
-        margin-right: 36px;
+        display: inline-block;
+        padding: 10px;
+        width: 23%;
+        height: 42px;
+        text-align: center;
+
+        &:first-child {
+          margin-left: 1em;
+        }
+        .icon-svg {
+          width: 35px;
+          height: 35px;
+        }
+        .icon-label {
+          display: none;
+        }
+      }
+      div {
+        padding-bottom: 10px;
       }
     }
     div, header {
@@ -211,18 +295,17 @@ $sidebar-width-expanded: 250px;
     }
   }
   .main {
+    padding-top: $sidebar-condensed-height + 25px;
     margin-top: -24px;
     margin-left: 0;
-    background: #eee;
+
+    .welcome {
+      font-size: 48px;
+    }
   }
 }
 
-
-/*      SOCIAL MEDIA       */
-
-.github-icon-svg,
-.twitter-icon-svg,
-.email-icon-svg {
+.icon-svg {
   display: inline-block;
   width: 16px;
   height: 16px;

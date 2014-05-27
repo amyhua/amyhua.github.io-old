@@ -1,10 +1,10 @@
-<div class="sidebar">
+<div id="sidebar">
   <header>
     <h1><a href="/">{{ site.title }}<span class="grey-lt">js</span></a></h1>
     <h2>Data-driven ruby+js developer</h2>
+    <div class="menu-link">&#9776;</div>
   </header>
   <div class="links">
-    <a href="/">Home</a>
     {% for page in site.pages %}
       <a href="{{page.url}}">{{ page.title }}</a>
     {% endfor %}
@@ -12,7 +12,7 @@
   <div class="contact">
     <a href="https://github.com/{{ site.github }}" target="_blank">
       <span class="icon github">
-        <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+        <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
           <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
           c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
           c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
@@ -24,12 +24,12 @@
           c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
         </svg>
       </span>
-      <span class="username"></span>
+      <span class="icon-label">Github</span>
     </a>
 
     <a href="https://twitter.com/{{ site.twitter }}" target="_blank">
       <span class="icon twitter">
-        <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+        <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
           <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
           c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
           c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
@@ -39,12 +39,12 @@
           c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path>
         </svg>
       </span>
-      <span class="username"></span>
+      <span class="icon-label">Twitter</span>
     </a>
 
-    <a href="mailto: foramyhua@gmail.com" target="_blank">
+    <a href="mailto:foramyhua@gmail.com?Subject=From%20amyhua.me:%20Hello">
       <span class="icon email">
-        <svg version="1.1" class="email-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+        <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
         xml:space="preserve">
         <path fill="#C2C2C2" d="M512,384c0,11.219-3.156,21.625-8.219,30.781L342.125,233.906L502.031,94c6.219,9.875,9.969,21.469,9.969,34V384z
         M256,266.75L478.5,72.063c-9.125-5-19.406-8.063-30.5-8.063H64c-11.109,0-21.391,3.063-30.484,8.063L256,266.75z M318.031,254.969
@@ -54,7 +54,7 @@
       </svg>
         </svg>
       </span>
-      <span class="username"></span>
+      <span class="icon-label">Email</span>
     </a>
   </div>
 </div>

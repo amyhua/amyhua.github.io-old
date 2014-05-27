@@ -12,18 +12,18 @@
   border: solid 1px #ddd;
   margin: auto; }
   #resume article {
-    margin-top: 3em;
-    /* TOOLS */
-    /*  EXPERIENCE SECTION */ }
-    #resume article .tag {
-      padding: 0 7px;
-      display: inline-block;
-      border: solid 1px #ddd;
-      margin-left: 3px;
-      margin-bottom: 5px;
-      border-radius: 3px;
-      background-color: #F8F8F8;
-      color: #8B845C; }
+    margin-top: 3em; }
+    #resume article .tools {
+      margin-top: 2em; }
+      #resume article .tools .tag {
+        padding: 0 7px;
+        display: inline-block;
+        border: solid 1px #ddd;
+        margin-left: 3px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        background-color: #F8F8F8;
+        color: #8B845C; }
     #resume article.experience {
       margin-top: 0;
       margin-bottom: 3em; }
@@ -143,8 +143,16 @@
       width: 145px;
       margin: 0 20px 10px 0;
       font-size: 12px; }
-    #resume .timeframe, #resume .duration {
-      margin: 0; }
+    #resume .timeframe {
+      margin: 0;
+      font-size: 16px;
+      margin-left: -5px; }
+    #resume .duration {
+      display: inline;
+      position: absolute;
+      top: 0;
+      right: 5px;
+      font-size: initial; }
     #resume .experience-desc {
       margin-top: 1em; }
       #resume .experience-desc ul li {

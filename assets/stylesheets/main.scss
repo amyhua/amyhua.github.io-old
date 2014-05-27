@@ -151,7 +151,13 @@ a:visited { color: #205caa; }
 
 .posts { list-style-type: none; }
 
-.posts li { margin-bottom: 30px; }
+.posts li {
+  margin-bottom: 30px;
+  padding: 1em;
+  border: solid 1px #7C97C0;
+  box-shadow: 1px 1px 5px #ddd;
+
+}
 
 .posts .post-link {
   font-size: 24px;
