@@ -1,0 +1,40 @@
+/*  PRINT VERSION */
+@page {
+  margin: 20px;
+  width: 1500px; }
+#sidebar {
+  display: none;
+  width: 0; }
+
+.main {
+  margin: 0;
+  border: none; }
+
+.resume-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  background: white; }
+
+#resume {
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 30px; }
+  #resume article.experience {
+    margin-bottom: 0.5em; }
+  #resume .level {
+    padding: 0 7px;
+    display: inline-block;
+    border: solid 1px #ddd;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    color: black; }
+  #resume .level .bar {
+    display: none; }
+
+.print-link {
+  display: none; }

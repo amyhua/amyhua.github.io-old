@@ -127,4 +127,16 @@ app.directive('menuLink', function(){
       })
     }
   }
+});
+
+
+app.directive('printLink', function(){
+  return {
+    restrict: 'C',
+    link: function($scope, element){
+      element.on('click', function(){
+        window.print();
+      })
+    }
+  }
 })

@@ -1,6 +1,8 @@
 .resume-wrap {
   padding: 3em 5em;
-  background: rgba(0, 0, 0, 0.08); }
+  background: rgba(0, 0, 0, 0.08);
+  position: relative;
+}
 
 #resume {
   padding: 3em;
@@ -209,6 +211,7 @@
   }
   #resume {
     padding: 1.5em;
+    padding-top: 5em;
 
     .level {
       width: 145px;
@@ -240,4 +243,26 @@
       }
     }
   }
+}
+
+.resume-print-link {
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    
+    display: block;
+    padding: 12px;
+    opacity: 0.5;
+    
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+}
+
+.print-icon-svg {
+    width: 24px;
+    height: 35px;
+    padding: 10px;
 }

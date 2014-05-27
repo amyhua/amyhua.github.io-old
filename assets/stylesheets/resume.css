@@ -1,6 +1,7 @@
 .resume-wrap {
   padding: 3em 5em;
-  background: rgba(0, 0, 0, 0.08); }
+  background: rgba(0, 0, 0, 0.08);
+  position: relative; }
 
 #resume {
   padding: 3em;
@@ -138,7 +139,8 @@
     padding: 25px 10px; }
 
   #resume {
-    padding: 1.5em; }
+    padding: 1.5em;
+    padding-top: 5em; }
     #resume .level {
       width: 145px;
       margin: 0 20px 10px 0;
@@ -157,3 +159,18 @@
       margin-top: 1em; }
       #resume .experience-desc ul li {
         margin-left: 10px; } }
+.resume-print-link {
+  position: absolute;
+  top: 2em;
+  right: 1em;
+  display: block;
+  padding: 12px;
+  opacity: 0.5;
+  cursor: pointer; }
+  .resume-print-link:hover {
+    opacity: 1; }
+
+.print-icon-svg {
+  width: 24px;
+  height: 35px;
+  padding: 10px; }
