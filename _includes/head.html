@@ -7,17 +7,25 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/leaflet.css" | prepend: site.baseurl }}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/assets/stylesheets/bootstrap-grid.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/assets/stylesheets/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/assets/stylesheets/layout.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/assets/stylesheets/resume.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/custom.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/demo-map.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/assets/stylesheets/print.css" | prepend: site.baseurl }}" media="print">
 
 
     <!-- Vendor JS -->
     <script src="{{ "/assets/javascript/angular.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/javascript/jquery.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/javascript/lodash.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/javascript/momentjs/moment.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/javascript/angular-leaflet-directive.js" | prepend: site.baseurl }}"></script>
 
     <!-- Custom JS -->
     <script src="{{ "/assets/javascript/main.js" | prepend: site.baseurl }}"></script>

@@ -103,7 +103,8 @@ body {
           opacity: 1; }
 
 .welcome-wrap {
-  margin-top: 5em; }
+  margin-top: 5em;
+  max-width: 800px; }
   .welcome-wrap .subtext {
     font-family: 'Rockwell', sans-serif;
     color: #B4B4B4;

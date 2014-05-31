@@ -1,0 +1,110 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.5em 0; }
+
+h2 {
+  font-size: 1.75em;
+  margin: 0.25em 0; }
+
+a {
+  color: dimgrey; }
+  a:hover {
+    text-decoration: none; }
+
+.hint {
+  color: #aaaaaa; }
+
+.sticky-link:hover, .sticky-link.active {
+  background-color: #dddddd !important;
+  color: black !important; }
+
+.cards-view .wrapper {
+  background: #333333; }
+.cards-view .row {
+  height: 300px; }
+  .cards-view .row.tertiary {
+    height: 100px; }
+  .cards-view .row .facet {
+    background: #555555;
+    border: 1px solid black; }
+  .cards-view .row:nth-of-type(odd) .facet {
+    background: #666666; }
+
+.facets-view ul {
+  position: absolute;
+  top: 40px;
+  bottom: 10px;
+  left: 0;
+  width: 20%; }
+  .facets-view ul li {
+    height: 20%; }
+.facets-view .main-viz {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  bottom: 10px;
+  left: 20%;
+  background: #555555; }
+
+.demo-content {
+  padding: 3em;
+  text-align: left; }
+  .demo-content h1, .demo-content h2, .demo-content h3, .demo-content h4 {
+    margin: 1em 0; }
+  .demo-content h1 {
+    font-size: 2em; }
+  .demo-content h2 {
+    font-size: 1.75em; }
+  .demo-content h3 {
+    font-size: 1.5em; }
+  .demo-content h4 {
+    font-size: 1.25em;
+    font-weight: bold; }
+  .demo-content a.plain-link {
+    display: inline-block;
+    padding: 10px;
+    font-size: 12px;
+    text-decoration: underline; }
+  .demo-content a.sticky-link, .demo-content a.toggle-link {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background: dimgrey;
+    color: white;
+    font-size: 14px;
+    cursor: pointer; }
+  .demo-content a.toggle-link.active {
+    background: brown; }
+  .demo-content table {
+    margin: 1em 0;
+    font-size: 12px; }
+    .demo-content table td:first-child, .demo-content table th:first-child {
+      text-align: left; }
+    .demo-content table.timers-table td:last-child, .demo-content table.timers-table th:last-child {
+      text-align: right; }
+    .demo-content table td, .demo-content table th {
+      padding: 5px;
+      margin: 0; }
+      .demo-content table td strong, .demo-content table th strong {
+        font-weight: bold; }
+    .demo-content table th {
+      background: #dddddd; }
+
+.side {
+  float: left;
+  width: 66%;
+  text-align: left; }
+
+.demo-map {
+  margin: 5em auto;
+  float: left;
+  width: 33%;
+  height: 600px;
+  box-shadow: 3px 4px 5px rgba(94, 94, 94, 0.6);
+  border: solid 2px #727272; }
+  .demo-map .leaflet-control-attribution {
+    display: none; }
