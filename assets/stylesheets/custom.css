@@ -57,6 +57,9 @@
           display: block; }
   .main-container pre {
     padding: 10px; }
+  .main-container code {
+    padding: 5px;
+    background: #eee; }
   .main-container blockquote {
     margin: 20px 10px;
     padding: 5px;

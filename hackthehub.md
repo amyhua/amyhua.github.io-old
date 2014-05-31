@@ -5,6 +5,8 @@ title: Hack the Hub
 
 #### General Resources
 
+* See the [Intro to Socrata APIs deck](http://socrata.github.io/presentations/hackathons/2014-05-31-ndoch/#/).
+
 * **Get data** from a number of government-sponsored open data portals, including **[Boston](https://data.cityofboston.gov), [Somerville](https://data.somervillema.gov/), and soon [Cambridge](http://www.cambridgema.gov/itd/opendata.aspx)** (launching June 2014), [New York City](https://nycopendata.socrata.com/), [Chicago](https://data.cityofchicago.org/), [Los Angeles](https://controllerdata.lacity.org/),... and [many others](http://www.socrata.com/customer-spotlight/), all powered by the Socrata platform.
 
 * **Create your own API-enabled datasets** on [opendata.socrata.com](http://opendata.socrata.com).
@@ -68,6 +70,19 @@ title: Hack the Hub
 
       http://....$where
 
+* **Run GeoQueries** on SODA <expand></expand>
+
+  * Find places within X meters of a certain point using 
+
+    > ?$where=within_circle(location_col_identifier, latitude, longitude, radius)
+
+    or
+
+    > ?$where=within_box(location_col_identifier, top_left_latitude, top_left_longitude, bottom_right_latitude, bottom_right_longitude)
+
+    **Example:**
+
+    > https://data.cityofboston.gov/resource/e29s-ympv.json?$where=within_circle(location,42.37857814268395,-71.03097975409406,500)
 
 * Visit the [Socrata Developer site](dev.socrata.com) or the [Socrata Support Forum](support.socrata.com) for more resources.
 
