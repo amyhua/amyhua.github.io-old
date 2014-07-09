@@ -30,7 +30,8 @@
       margin-bottom: 3em; }
     #resume article .experience-desc h1 {
       font-size: 17px;
-      text-transform: inherit; }
+      text-transform: inherit;
+      margin-top: 2px; }
     #resume article .experience-desc h2 {
       font-size: 15px;
       font-weight: 200;
