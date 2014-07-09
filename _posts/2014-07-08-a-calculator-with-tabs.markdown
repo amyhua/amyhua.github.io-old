@@ -11,3 +11,5 @@ A good friend of mine came up with this idea: "what if we had a calculator with 
 <a target="_tab" href="http://calculatorific.herokuapp.com"><img src="/assets/images/calculatorific.png"></a>
 
 It got me thinking -- what if we could reinvent the modern calculator UI? Calculators are long due a face lift. Who uses those M+, MR, M- keys, anyway? Or know what they mean?
+
+What if we united the simplicity of a calculator with the extensive capabilities of a spreadsheet?
