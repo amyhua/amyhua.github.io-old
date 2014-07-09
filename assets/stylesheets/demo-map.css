@@ -51,7 +51,6 @@ a {
   background: #555555; }
 
 .demo-content {
-  padding: 3em;
   text-align: left; }
   .demo-content h1, .demo-content h2, .demo-content h3, .demo-content h4 {
     margin: 1em 0; }
@@ -95,14 +94,11 @@ a {
       background: #dddddd; }
 
 .side {
-  float: left;
-  width: 66%;
+  width: 100%;
   text-align: left; }
 
 .demo-map {
   margin: 5em auto;
-  float: left;
-  width: 33%;
   height: 600px;
   box-shadow: 3px 4px 5px rgba(94, 94, 94, 0.6);
   border: solid 2px #727272; }
