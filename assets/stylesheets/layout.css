@@ -47,17 +47,19 @@ body {
     margin-bottom: 20px;
     text-transform: lowercase;
     width: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     font-size: 20px; }
     #sidebar header h1, #sidebar header h2 {
       padding: 10px;
-      padding-left: 20px; }
+      padding-left: 20px;
+      margin-top: 0; }
     #sidebar header h1 {
       font-size: 26px;
       font-weight: 500; }
     #sidebar header h2 {
       font-size: 20px;
-      font-weight: 200; }
+      font-weight: 200;
+      display: none; }
   #sidebar a, #sidebar a:visited {
     text-decoration: none;
     color: inherit; }
@@ -98,7 +100,7 @@ body {
       #sidebar .contact a:hover {
         text-decoration: none; }
         #sidebar .contact a:hover path {
-          fill: #696969; }
+          fill: white; }
         #sidebar .contact a:hover .icon-label {
           opacity: 1; }
 
@@ -106,13 +108,13 @@ body {
   margin-top: 5em;
   max-width: 800px; }
   .welcome-wrap .subtext {
-    font-family: 'Rockwell', sans-serif;
+    font-family: monospace;
     color: #B4B4B4;
     padding: 5px;
     margin-top: 1em; }
   .welcome-wrap .welcome {
     font-size: 3.5em;
-    font-family: 'Rockwell', Arial, sans-serif;
+    font-family: monospace;
     background: rgba(255, 255, 163, 0.39);
     display: inline;
     box-shadow: 5px 4px 3px #998F6E; }
@@ -137,6 +139,8 @@ body {
     top: 0;
     height: 100%;
     box-shadow: 3px 0px 4px #F0F0F0; }
+    #sidebar h2 {
+      display: block; }
     #sidebar .menu-link {
       display: none; }
     #sidebar .contact {
@@ -175,7 +179,12 @@ body {
       border: none;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
-      font-size: 18px; }
+      font-size: 18px;
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      -ms-transition: background 0.3s ease-in-out;
+      -o-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out; }
       #sidebar .links a:hover {
         border: none;
         color: black;
@@ -192,6 +201,8 @@ body {
       padding: 5px;
       font-size: 34px;
       cursor: pointer; }
+      #sidebar .menu-link:hover {
+        color: white; }
     #sidebar .contact {
       position: relative;
       margin-top: 2em;

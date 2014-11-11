@@ -75,12 +75,13 @@ body {
     margin-bottom: 20px;
     text-transform: lowercase;
     width: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     font-size: $header-font-size;
 
     h1, h2 {
       padding: 10px;
       padding-left: $sidebar-padding-left;
+      margin-top: 0;
     }
     h1 {
       font-size: 26px;
@@ -89,6 +90,7 @@ body {
     h2 {
       font-size: 20px;
       font-weight: 200;
+      display: none;
     }
   }
 
@@ -135,7 +137,7 @@ body {
       &:hover {
         text-decoration: none;
         path {
-          fill: #696969;
+          fill: white;
         }
         .icon-label {
           opacity: 1;
@@ -152,7 +154,7 @@ body {
 
 
   .subtext {
-    font-family: 'Rockwell', sans-serif;
+    font-family: monospace;
     color: #B4B4B4;
     padding: 5px;
     margin-top: 1em;
@@ -160,7 +162,7 @@ body {
 
   .welcome {
     font-size: 3.5em;
-    font-family: 'Rockwell', Arial, sans-serif;
+    font-family: monospace;
     background: rgba(255, 255, 163, 0.39);
     display: inline;
     box-shadow: 5px 4px 3px #998F6E;
@@ -195,6 +197,10 @@ $sidebar-width-expanded: 250px;
     top: 0;
     height: 100%;
     box-shadow: 3px 0px 4px #F0F0F0;
+
+    h2 {
+      display: block;
+    }
 
     .menu-link {
       display: none;
@@ -247,6 +253,8 @@ $sidebar-condensed-height: 60px;
       padding-bottom: 0.5em;
       font-size: 18px;
 
+      @include transition(background, 0.3s);
+
       &:hover {
         border: none;
         color: black;
@@ -266,6 +274,10 @@ $sidebar-condensed-height: 60px;
       padding: 5px;
       font-size: 34px;
       cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
     }
 
     .contact {

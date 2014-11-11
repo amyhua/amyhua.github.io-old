@@ -33,8 +33,9 @@ app.controller('ResumeCtrl', function($scope){
   $scope.skills = [
     { name: 'Javascript', level: 90 },
     { name: 'AngularJS', level: 80 },
-    { name: 'Ruby on Rails & Sinatra', level: 70 },
-    { name: 'HTML & CSS with SASS', level: 90 },
+    { name: 'BackboneJS', level: 40 },
+    { name: 'Ruby, Rails, Sinatra', level: 70 },
+    { name: 'HTML & CSS', level: 90 },
     { name: 'D3', level: 50 },
     { name: 'Data Analysis', level: 80 },
     { name: 'Design', level: 20 },
@@ -54,27 +55,41 @@ app.controller('ResumeCtrl', function($scope){
                     'RSpec',
                     'SASS',
                     'LESS',
+                    'Stylus',
                     'Node',
                     'Mocha',
                     'Chai',
                     'Karma'];
 
   $scope.experiences = [
+    { role: 'Front-End Software Engineer',
+      org: 'Databricks, Inc',
+      link: 'www.databricks.com',
+      timeframe: ['Sep 2014', 'Present'],
+      brief: 'Andressen Horowitz Big Data Startup providing a cloud platform solution for big data analytics, processing, and storage.',
+      tools: ['angular','d3','chai','mocha','karma'],
+      desc: [
+        'Served on the Execution Team to collaboratively make decisions on software features, testing, and maintenance of the product',
+        'Initialized design discussions regarding better front-end tooling, asset management, and automated testing tools',
+        'Collaborated with team members across the stack to fix critical pre-release UI bugs with data visualization notebooks',
+        'Fixed day-to-day major to critical front-end bugs on the core product as the sole fully front-end developer on the team'
+      ] },
     { role: 'Front-End Developer',
       org: 'Socrata, Inc',
-      timeframe: ['Dec 2013', 'Present'],
+      link: 'www.socrata.com',
+      timeframe: ['Dec 2013', 'Aug 2014'],
       brief: 'Open Data SaaS provider serving data.gov, CMS, Chicago, New York, World Bank, UN, and many others.',
       tools: ['angular','d3','chai','mocha','karma'],
       desc: [
-        'Implementing highly interactive responsive web apps in Angular, Rails & Sinatra powered by RESTful backend APIs',
-        'Developing, implementing, testing & maintaining release of new user-facing data visualization features',
-        'Writing automated backend & frontend tests to verify behavior across all major browsers',
-        'Collaborating on overall technical architecture, modeling & design decisions to optimize speed & scale',
-        "Working closely with PMs, BAs & designers to balance business objectives with technical quality"
+        'Implemented highly interactive responsive web apps in Angular, Rails & Sinatra powered by RESTful backend APIs',
+        'Developed, tested & maintained release of new user-facing data visualization features',
+        'Wrote automated backend & frontend tests to verify behavior across all major browsers',
+        'Collaborated on overall technical architecture, modeling & design decisions to optimize speed & scale',
+        "Worked closely with PMs, BAs & designers to balance business objectives with technical quality"
       ] },
     { role: 'Freelance Full Stack Web Developer',
       org: 'Self-Employed',
-      timeframe: ['Aug 2013', 'Present'],
+      timeframe: ['Aug 2013', 'Mar 2014'],
       desc: [
         'Collaborating closely with clients to deliver an end-to-end product with visual design and usability in mind',
         'Implementing rich, cross-browser compatible Javascript applications in Angular and Rails',
