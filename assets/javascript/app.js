@@ -33,9 +33,9 @@ app.controller('ResumeCtrl', function($scope){
   $scope.skills = [
     { name: 'Javascript', level: 90 },
     { name: 'AngularJS', level: 80 },
-    { name: 'BackboneJS', level: 40 },
+    { name: 'BackboneJS', level: 30 },
     { name: 'Ruby, Rails, Sinatra', level: 70 },
-    { name: 'HTML & CSS', level: 90 },
+    { name: 'HTML & CSS (SASS)', level: 90 },
     { name: 'D3', level: 50 },
     { name: 'Data Analysis', level: 80 },
     { name: 'Design', level: 20 },
@@ -52,11 +52,8 @@ app.controller('ResumeCtrl', function($scope){
                     'Heroku',
                     'Sublime',
                     'Test:Unit',
-                    'RSpec',
                     'SASS',
-                    'LESS',
                     'Stylus',
-                    'Node',
                     'Mocha',
                     'Chai',
                     'Karma'];
@@ -65,7 +62,7 @@ app.controller('ResumeCtrl', function($scope){
     { role: 'Front-End Software Engineer',
       org: 'Databricks, Inc',
       link: 'www.databricks.com',
-      timeframe: ['Sep 2014', 'Present'],
+      timeframe: ['Sep 2014', 'Nov 2014'],
       brief: 'Andressen Horowitz Big Data Startup providing a cloud platform solution for big data analytics, processing, and storage.',
       tools: ['angular','d3','chai','mocha','karma'],
       desc: [
@@ -89,7 +86,7 @@ app.controller('ResumeCtrl', function($scope){
       ] },
     { role: 'Freelance Full Stack Web Developer',
       org: 'Self-Employed',
-      timeframe: ['Aug 2013', 'Mar 2014'],
+      timeframe: ['Aug 2013', 'Nov 2013'],
       desc: [
         'Collaborating closely with clients to deliver an end-to-end product with visual design and usability in mind',
         'Implementing rich, cross-browser compatible Javascript applications in Angular and Rails',
