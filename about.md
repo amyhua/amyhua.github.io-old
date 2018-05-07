@@ -53,7 +53,7 @@ permalink: /about/
     <div class="col-md-9">
       <div class="experience-desc">
         <h1>{(exp.role)}</h1>
-        <h2>{(exp.org)}</h2>
+        <h2><a ng-href="exp.link" target="_blank">{(exp.org)}</a></h2>
         <p>{(exp.brief)}</p>
         <ul>
           <li ng-repeat="desc in exp.desc">{(desc)}</li>

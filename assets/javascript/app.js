@@ -29,41 +29,70 @@ app.config([
 ]);
 
 app.controller('ResumeCtrl', function($scope){
-  console.log('ResumeCtrl')
   $scope.skills = [
     { name: 'Javascript', level: 90 },
-    { name: 'AngularJS', level: 80 },
-    { name: 'BackboneJS', level: 30 },
-    { name: 'Ruby, Rails, Sinatra', level: 70 },
+    { name: 'React + Redux', level: 90 },
     { name: 'HTML & CSS (SASS)', level: 90 },
-    { name: 'D3', level: 50 },
-    { name: 'Data Analysis', level: 80 },
-    { name: 'Design', level: 20 },
-    { name: 'Creativity', level: 80 },
-    { name: 'User Experience', level: 30 }
+    { name: 'Creativity', level: 90 },
+    { name: 'AngularJS', level: 80 },
+    { name: 'User Experience', level: 70 },
+    { name: 'Design', level: 60 },
+    { name: 'Application Architecture', level: 60 },
+    { name: 'Ruby, Rails, Sinatra', level: 50 },
+    { name: 'Data Analysis', level: 70 },
+    { name: 'Spark (PySpark)', level: 30 },
+    { name: 'D3', level: 30 },
+    { name: 'BackboneJS', level: 20 },
   ].sort(function(a,b){
     return b.level - a.level;
   });
 
   $scope.tools = [  'Git',
+                    'Webpack',
+                    'Yarn/NPM',
                     'Bower',
                     'Grunt',
                     'Rake',
                     'Heroku',
                     'Sublime',
                     'Test:Unit',
-                    'SASS',
+                    'SASS/Stylus/LESS',
                     'Stylus',
                     'Mocha',
                     'Chai',
                     'Karma'];
 
   $scope.experiences = [
+    { role: 'Chief Architect',
+      org: 'Live XYZ',
+      link: 'www.live.xyz',
+      timeframe: ['Apr 2017', 'Jan 2018'],
+      brief: 'Series-A Location Intelligence Startup',
+      desc: [
+        'Envisioned and delivered a rebuild of our technical architecture, addressing past technical debt and areas of inconsistent system design.',
+        'Achieved greater conceptual integrity across all teams at Live, using a coherent framework of Live’s domain concepts and system design. ',
+        'Managed a team of 5 engineers, a designer, and a product manager to rebuild Live Mapping, enabling powerful capabilities on our platform for capturing live location data about urban areas.',
+        'Maintained ongoing check-ins with engineers and data scientists to ensure teams are in sync, identifying operational bottlenecks and following through on their areas of improvement via one-on-one meetings.'
+      ] },
+    { role: 'Front-End Software Lead',
+      org: 'Live XYZ',
+      link: 'www.live.xyz',
+      timeframe: ['Jan 2015', 'Jun 2017'],
+      brief: 'Series-A Location Intelligence Startup',
+      tools: ['angular', 'react', 'redux', 'rxjs', 'webpack', 'circleci','selenium','jest','protractor', 'jasmine', 'node', 'express', 'pyspark'],
+      desc: [
+        'Set up, built and then eventually became front end tech lead of Live’s internal data management system, Symphony, a large single-page application built with Angular, SASS, Node & Webpack, and deployed with CircleCI & Heroku',
+        'Collaborated heavily with the CEO and CTO to develop client requirements, designs, and develop requirements according to spec in an agile environment',
+        'Regularly collaborated with backend engineers to develop API endpoints according to client requirements',
+        'Coordinated production releases, set up deployment environments, and set up testing with continuous integration using CircleCI',
+        'Overhauled a codebase built in AngularJS into React+Redux',
+        'Developed best practices for code reviews and code linting to maintain consistency',
+      ] },
     { role: 'Front-End Software Engineer',
       org: 'Databricks, Inc',
       link: 'www.databricks.com',
       timeframe: ['Sep 2014', 'Nov 2014'],
-      brief: 'Andressen Horowitz Big Data Startup providing a cloud platform solution for big data analytics, processing, and storage.',
+      brief: 'Andressen Horowitz funded Big Data Startup providing a cloud platform solution for big data analytics, processing, and storage.',
       tools: ['angular','d3','chai','mocha','karma'],
       desc: [
         'Served on the Execution Team to collaboratively make decisions on software features, testing, and maintenance of the product',
@@ -122,7 +151,7 @@ app.controller('ResumeCtrl', function($scope){
       ] }
   ]
 
-  $scope.test = "TEST";
+  // $scope.test = "TEST";
 });
 
 app.filter('start', function() {
@@ -139,6 +168,7 @@ app.filter('end', function() {
 
 app.filter('duration', function() {
   return function(timeframe) {
+    debugger
     var startDate = timeframe[0], endDate = timeframe[1];
     if (endDate === 'Present') {
       return moment(startDate, 'MMM YYYY').fromNow()
