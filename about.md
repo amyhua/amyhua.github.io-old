@@ -46,9 +46,9 @@ permalink: /about/
       <div class="timeframe" ng-if="exp.timeframe">
         {(exp.timeframe | start )} - {(exp.timeframe | end )}
       </div>
-      <div class="duration" ng-if="exp.timeframe">
+      <!-- <div class="duration" ng-if="exp.timeframe">
         {(exp.timeframe | duration)}
-      </div>
+      </div> -->
     </div>
     <div class="col-md-9">
       <div class="experience-desc">
