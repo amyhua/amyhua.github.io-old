@@ -168,14 +168,13 @@ app.filter('end', function() {
 
 app.filter('duration', function() {
   return function(timeframe) {
-    debugger
     var startDate = timeframe[0], endDate = timeframe[1];
     if (endDate === 'Present') {
-      return moment(startDate, 'MMM YYYY').fromNow()
+      return moment(startDate, 'MMM YYYY').add(-1, 'months').fromNow()
               .replace(' ago','')
               + '+';
     } else {
-      return moment(startDate, 'MMM YYYY').from(moment(endDate, 'MMM YYYY'))
+      return moment(startDate, 'MMM YYYY').add(-1, 'months').from(moment(endDate, 'MMM YYYY'))
               .replace(' ago','');
     }
 
