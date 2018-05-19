@@ -9,7 +9,7 @@ permalink: /about/
   <div class="row header">
     <div class="col-xs-6">
       <h1>Amy Hua</h1>
-      <h3>Web developer</h3>
+      <h3>Software Engineer</h3>
     </div>
     <div class="col-xs-6 contact-info">
       <ul>
